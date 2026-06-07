@@ -6,7 +6,7 @@
 
 ## 📷 Demonstração
 
-![Screenshot do Projeto](./public/Captura%20de%20tela.png)
+![Screenshot do Projeto](./Captura%20de%20tela.png)
 *Link do projeto:* [Visite o site](https://rafaelmachadodev.vercel.app)
 
 ---
