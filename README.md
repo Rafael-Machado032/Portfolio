@@ -18,6 +18,10 @@
 * **TypeScript** — Tipagem estática para maior segurança no código.
 * **Tailwind CSS** — Estilização rápida e responsiva baseada em classes utilitárias.
 
+### Back-end & Banco de Dados
+* **Laravel** — Framework PHP robusto para a API e lógica de negócios.
+* **PostgreSQL** — Banco de dados utilizado PostgreSQL para persistência de dados.
+
 ---
 
 ## ✨ Funcionalidades Principais
