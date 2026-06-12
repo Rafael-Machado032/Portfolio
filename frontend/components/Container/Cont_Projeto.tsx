@@ -35,7 +35,10 @@ export default function Cont_Projeto({ projetoDados }: { projetoDados: Projeto }
             </div>
             <div className="flex flex-col justify-between items-center gap-2 p-4 flex-1">
                 <div>
-                    <span className="text-[#00f2ff] bg-[#00424572] px-4 pb-1 rounded-4xl">{projetoDados.tecnologia.split(',').map(t => t.trim()).join(' + ')}</span>
+                    <div className="text-justify text-xs font-medium">
+                        <span className="text-[#00f2ff] bg-[#00424572] px-4 pb-1 rounded-4xl box-decoration-clone">{projetoDados.tecnologia.split(',').map(t => t.trim()).join(' + ')}</span>
+                    </div>
+                    
                     <h3 className="text-xl mt-2">{projetoDados?.titulo}</h3>
                     <p ref={textRef} className={`dark:text-[#aaaaaa] text-sm overflow-hidden transition-all duration-500 ease-in-out ${!expandido ? 'line-clamp-3' : 'line-clamp-none'}`}>
                         {projetoDados?.descricao}
