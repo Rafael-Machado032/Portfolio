@@ -141,6 +141,7 @@ export default function Aside() {
             } else if (itemDados.tipo === "curriculo") {
                 if (curriculo && curriculo.size > 0) {
                     resposta = await CriarCurriculoAction(formData);
+                    console.log("Resposta do servidor para Curriculo", resposta);
                     if (resposta.success) {
                         // console.log("Resposta do Banco para Contexto Curriculo CRIAR", resposta.dados);
                         setCurriculoDados(resposta.dados as Curriculo)
