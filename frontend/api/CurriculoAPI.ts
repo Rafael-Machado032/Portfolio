@@ -50,7 +50,7 @@ export async function CriarCurriculoAction(formData: FormData) {
 
         revalidatePath('/admin');
         revalidatePath('/');
-
+        console.log("Resposta do servidor", dadosDoBanco);
         return {
             success: true,
             dados: dadosDoBanco.data,
