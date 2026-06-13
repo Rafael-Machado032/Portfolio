@@ -1,4 +1,4 @@
-## 📦 Integração com APIs e Dependências teste
+## 📦 Integração com APIs e Dependências
 
 ### ☁️ Cloudinary (Gerenciamento de Mídias)
 Utilizado para realizar o upload e a conversão de arquivos (como PDFs e URLs) em imagens para exibição dinâmica nos cards do portfólio.
