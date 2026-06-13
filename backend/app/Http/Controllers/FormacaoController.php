@@ -73,8 +73,6 @@ class FormacaoController extends Controller
                     Log::info("URL da Capa Gerada: " . $urlCapa);
                     Log::info(" ");
                     Log::info("#####################################################################################################################################################################################");
-
-                    
                     
                 } catch (\Exception $e) {
                     Log::error("ERRO NO CLOUDINARY: " . $e->getMessage());

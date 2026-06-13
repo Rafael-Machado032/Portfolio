@@ -27,7 +27,7 @@ class CurriculoController extends Controller
                 $file = $request->file('curriculo_form');
 
                 try {
-                    
+
                     $uploadApi = new UploadApi();
 
                     $uploadResult = $uploadApi->upload($file->getRealPath(), [
@@ -38,18 +38,10 @@ class CurriculoController extends Controller
                     ]);
 
                     $urlPdfCloudinary = $uploadResult['secure_url'];
-                    
                 } catch (\Exception $e) {
                     Log::error('Erro ao fazer upload do currículo para o Cloudinary.', ['error' => $e->getMessage()]);
                 }
             }
-
-            // 3. PERSISTÊNCIA (SALVAR NO BANCO)
-            // Mapeie: 'coluna_no_banco' => $dadosValidados['campo_do_form']
-            // $dadosCurriculo = Curriculo::create([
-            //     'id' => "1",
-            //     'curriculo_url' => $path,
-            // ]);
 
             $dadosCurriculo = Curriculo::updateOrCreate(
                 ['id' => 1],          // 1º Array: Condição (Procure por este ID)
@@ -72,7 +64,13 @@ class CurriculoController extends Controller
 
     public function show(Curriculo $curriculo)
     {
-        return response()->json($curriculo, 200);
+        try {
+            return response()->json($curriculo, 200);
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => 'Erro ao mostrar o currículo.',
+                'details' => $e->getMessage()
+            ], 500);
+        }
     }
-
 }
