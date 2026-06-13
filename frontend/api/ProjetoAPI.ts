@@ -42,6 +42,7 @@ export async function BuscarProjetosAction() {
 export async function CriarProjetoAction(formData: FormData) {
     try {
         const headers = await getAuthHeaders(); // Pega o token
+        
         const res = await fetch(`${urlBase}/projeto`, {
             method: 'POST',
             body: formData,

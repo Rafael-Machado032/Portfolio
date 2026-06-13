@@ -29,8 +29,9 @@ export async function BuscarCurriculoAction() {
         return {
             dados: dadosDoBanco
         };
-    } catch {
-        return null;
+    } catch (error) {
+        console.error("Erro no Backend:", error);
+        return { success: false };
     }
 }
 
@@ -57,7 +58,8 @@ export async function CriarCurriculoAction(formData: FormData) {
             dados: dadosDoBanco.data,
         };
 
-    } catch {
+    } catch (error) {
+        console.error("Erro no Backend:", error);
         return { success: false };
     }
 }
